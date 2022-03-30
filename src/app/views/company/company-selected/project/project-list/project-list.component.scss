@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  .project-search-field {
+    margin-top: 20px;
+  }
+
+  .message {
+    padding: 10px 0;
+  }
+}

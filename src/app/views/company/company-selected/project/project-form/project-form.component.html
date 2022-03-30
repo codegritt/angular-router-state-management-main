@@ -1,0 +1,9 @@
+<h1>Project Form</h1>
+
+<form [formGroup]="projectForm" (ngSubmit)="submitForm()">
+  <label for="projectName">Project Name</label>
+  <input id="projectName" formControlName="name" />
+  <button>{{ selectedProject ? 'Update' : 'Create' }} Project</button>
+</form>
+
+<a class="button danger" routerLink="../">Cancel</a>

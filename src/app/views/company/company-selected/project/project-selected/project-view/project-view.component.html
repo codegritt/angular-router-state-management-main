@@ -1,0 +1,18 @@
+<h1>Project View</h1>
+
+<a class="button success" routerLink="../">Go Back</a>
+
+<span>Company:</span>
+<ng-container *ngIf="company$ | async as company; else loadingCompany">
+  <pre>{{ company | json }}</pre>
+</ng-container>
+<ng-template #loadingCompany>Loading Company...</ng-template>
+
+<span>Project:</span>
+<ng-container *ngIf="project$ | async as project; else loadingProject">
+  <pre>{{ project | json }}</pre>
+</ng-container>
+<ng-template #loadingProject>Loading Project...</ng-template>
+
+<button class="button danger" (click)="deleteProject()">Delete Project</button>
+<a class="button warning" routerLink="./edit">Edit Project</a>
