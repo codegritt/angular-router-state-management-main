@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home';
 
+
+const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +15,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./views/company/company.module').then((m) => m.CompanyModule),
   },
+  { path: 'home', component: HomeComponent },
+  { path: 'users', loadChildren: usersModule },
 ];
 
 @NgModule({
