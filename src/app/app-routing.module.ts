@@ -7,7 +7,7 @@ const usersModule = () => import('./users/users.module').then(x => x.UsersModule
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'companies',
+    redirectTo: 'users',
     pathMatch: 'full',
   },
   {
