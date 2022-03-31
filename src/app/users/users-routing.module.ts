@@ -7,6 +7,7 @@ import { AddEditComponent } from './add-edit.component';
 
 
 
+
 const routes: Routes = [
     {
         path: '', component: LayoutComponent,
@@ -15,7 +16,7 @@ const routes: Routes = [
           
             { path: 'add', component: AddEditComponent },
             { path: 'edit/:id', component: AddEditComponent },
-           
+          
         ]
     }
 ];
